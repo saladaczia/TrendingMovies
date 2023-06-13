@@ -13,6 +13,7 @@ class TrendingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TrendingService().sendUpcomingMoviesRequest()
         // Assignment TableView data source
         TrendingTableView.dataSource = self
         
