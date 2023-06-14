@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TrendingController: UIViewController {
 
+    // Outlet
     @IBOutlet weak var TrendingTableView: UITableView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,7 @@ extension TrendingController: UITableViewDataSource {
     
     // Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return 20
     }
     
@@ -41,9 +42,6 @@ extension TrendingController: UITableViewDataSource {
         // init cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
         
-        
-        
-        cell.posterImage.image = UIImage(named: "AppIcon")
         // Update data in table
         TrendingService().getTrendingRequest { (movieList) in
             let mv = movieList[indexPath.row]
@@ -52,7 +50,12 @@ extension TrendingController: UITableViewDataSource {
             cell.yearLabel.text = String(mv.releaseDate!.dropLast(6))
             cell.scoreLabel.text = String(format: "%.1f", mv.voteAverage!)
             cell.genereLabel.text = Genre.getName(genreNum: mv.genreIDS![0])
-            "print(mv.posterPath!) https://image.tmdb.org/t/p/w500"
+            
+            // Download image with using kingfisher
+            let urlString = "https://image.tmdb.org/t/p/w500\(mv.posterPath!)"
+            let url = URL(string: urlString)
+            cell.posterImage.kf.indicatorType = .activity
+            cell.posterImage.kf.setImage(with: url)
         }
         return cell
     }
