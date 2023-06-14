@@ -10,8 +10,12 @@ import Alamofire
 
 struct TrendingService {
     
-    func sendUpcomingMoviesRequest() {
+    
+    
+    func getTrendingRequest(completion: @escaping ([Result]) -> Void) {
 
+       
+        
         // Add Headers
         let headers: HTTPHeaders = [
             "Accept":"application/json",
@@ -23,12 +27,15 @@ struct TrendingService {
             "language":"pl-PL",
             "page":"1",
         ]
-
+        
+       // Alamofire request
         AF.request("https://api.themoviedb.org/3/movie/popular", method: .get, parameters: urlParams, headers: headers)
           .validate()
           .responseDecodable(of: TrendingModel.self) { (response) in
             guard let trending = response.value else { return }
-              print(trending.results![0].title)
+              let movieList = trending.results!
+                  // use clousure for push results data to controller
+              completion(movieList)
           }
 
         

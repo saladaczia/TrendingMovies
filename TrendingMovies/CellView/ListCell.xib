@@ -31,8 +31,11 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCE-X4-2I0" userLabel="Orginal Title">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="CCE-X4-2I0" userLabel="Orginal Title">
                         <rect key="frame" x="125" y="43.333333333333336" width="257" height="20.333333333333336"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.329999999999998" id="fi4-jJ-TuH"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
@@ -52,13 +55,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7,47" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rm-Ii-Rk0">
-                        <rect key="frame" x="148" y="96.333333333333329" width="30" height="19.333333333333329"/>
+                        <rect key="frame" x="148" y="96" width="30" height="19.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gatunek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uab-OP-qCj">
-                        <rect key="frame" x="125" y="124.66666666666669" width="53" height="17"/>
+                        <rect key="frame" x="125" y="124.33333333333331" width="53" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="EcZ-z9-gQW"/>
                             <constraint firstAttribute="width" constant="53" id="bOe-0w-OE9"/>

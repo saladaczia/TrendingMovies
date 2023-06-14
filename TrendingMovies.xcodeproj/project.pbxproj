@@ -11,8 +11,8 @@
 		44024A6E2A384A9900E5B946 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44024A6C2A384A9900E5B946 /* ListCell.xib */; };
 		44024A722A38641700E5B946 /* TrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44024A712A38641700E5B946 /* TrendingModel.swift */; };
 		44024A762A38643800E5B946 /* TrendingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44024A752A38643800E5B946 /* TrendingService.swift */; };
-		44024A792A38668900E5B946 /* TrendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44024A782A38668900E5B946 /* TrendingViewModel.swift */; };
 		44024A7C2A3867E600E5B946 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44024A7B2A3867E600E5B946 /* Alamofire */; };
+		4408C6FB2A39AB1300F7572C /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4408C6FA2A39AB1300F7572C /* Genre.swift */; };
 		4466ADFA2A3845C0009B1B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466ADF92A3845C0009B1B93 /* AppDelegate.swift */; };
 		4466ADFC2A3845C0009B1B93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466ADFB2A3845C0009B1B93 /* SceneDelegate.swift */; };
 		4466ADFE2A3845C0009B1B93 /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466ADFD2A3845C0009B1B93 /* TrendingController.swift */; };
@@ -26,7 +26,7 @@
 		44024A6C2A384A9900E5B946 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		44024A712A38641700E5B946 /* TrendingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingModel.swift; sourceTree = "<group>"; };
 		44024A752A38643800E5B946 /* TrendingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingService.swift; sourceTree = "<group>"; };
-		44024A782A38668900E5B946 /* TrendingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewModel.swift; sourceTree = "<group>"; };
+		4408C6FA2A39AB1300F7572C /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		4466ADF62A3845C0009B1B93 /* TrendingMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4466ADF92A3845C0009B1B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4466ADFB2A3845C0009B1B93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,11 +97,11 @@
 				4466AE0F2A384650009B1B93 /* Resources */,
 				44024A702A38639200E5B946 /* Model */,
 				44024A772A38643B00E5B946 /* Services */,
-				4466AE1D2A3847E0009B1B93 /* ViewModel */,
 				4466AE0D2A384612009B1B93 /* Controller */,
 				44024A6F2A384A9E00E5B946 /* CellView */,
 				4466AE112A38468D009B1B93 /* View */,
 				4466AE102A38467B009B1B93 /* Supporting Files */,
+				4408C6FA2A39AB1300F7572C /* Genre.swift */,
 			);
 			path = TrendingMovies;
 			sourceTree = "<group>";
@@ -146,14 +146,6 @@
 				4466ADFF2A3845C0009B1B93 /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4466AE1D2A3847E0009B1B93 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				44024A782A38668900E5B946 /* TrendingViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +229,10 @@
 				4466ADFE2A3845C0009B1B93 /* TrendingController.swift in Sources */,
 				44024A722A38641700E5B946 /* TrendingModel.swift in Sources */,
 				44024A6D2A384A9900E5B946 /* ListCell.swift in Sources */,
-				44024A792A38668900E5B946 /* TrendingViewModel.swift in Sources */,
 				44024A762A38643800E5B946 /* TrendingService.swift in Sources */,
 				4466ADFA2A3845C0009B1B93 /* AppDelegate.swift in Sources */,
 				4466ADFC2A3845C0009B1B93 /* SceneDelegate.swift in Sources */,
+				4408C6FB2A39AB1300F7572C /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
