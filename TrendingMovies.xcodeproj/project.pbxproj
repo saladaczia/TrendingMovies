@@ -98,12 +98,12 @@
 				4466AE0E2A38463E009B1B93 /* Sources */,
 				4466AE0F2A384650009B1B93 /* Resources */,
 				44024A702A38639200E5B946 /* Model */,
+				44CADCA12A39E03E002F8293 /* Menager */,
 				44024A772A38643B00E5B946 /* Services */,
 				4466AE0D2A384612009B1B93 /* Controller */,
 				44024A6F2A384A9E00E5B946 /* CellView */,
 				4466AE112A38468D009B1B93 /* View */,
 				4466AE102A38467B009B1B93 /* Supporting Files */,
-				4408C6FA2A39AB1300F7572C /* Genre.swift */,
 			);
 			path = TrendingMovies;
 			sourceTree = "<group>";
@@ -148,6 +148,14 @@
 				4466ADFF2A3845C0009B1B93 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		44CADCA12A39E03E002F8293 /* Menager */ = {
+			isa = PBXGroup;
+			children = (
+				4408C6FA2A39AB1300F7572C /* Genre.swift */,
+			);
+			path = Menager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
