@@ -33,9 +33,12 @@ struct TrendingService {
           .validate()
           .responseDecodable(of: TrendingModel.self) { (response) in
             guard let trending = response.value else { return }
-              let movieList = trending.results!
+              if let movieList = trending.results {
+                  completion(movieList)
+              }
+              
                   // use clousure for push results data to controller
-              completion(movieList)
+              
           }
 
         

@@ -47,15 +47,21 @@ extension TrendingController: UITableViewDataSource {
             let mv = movieList[indexPath.row]
             cell.titleLabel.text = mv.title
             cell.orgTitleLabel.text = mv.originalTitle
-            cell.yearLabel.text = String(mv.releaseDate!.dropLast(6))
-            cell.scoreLabel.text = String(format: "%.1f", mv.voteAverage!)
-            cell.genereLabel.text = Genre.getName(genreNum: mv.genreIDS![0])
+            if let year = mv.releaseDate, let score = mv.voteAverage, let genre = mv.genreIDS {
+                cell.yearLabel.text = String(year.dropLast(6))
+                cell.scoreLabel.text = String(format: "%.1f", score)
+                cell.genereLabel.text = Genre.getName(genreNum: genre[0])
+            }
+            
             
             // Download image with using kingfisher
-            let urlString = "https://image.tmdb.org/t/p/w500\(mv.posterPath!)"
-            let url = URL(string: urlString)
-            cell.posterImage.kf.indicatorType = .activity
-            cell.posterImage.kf.setImage(with: url)
+            if let poster = mv.posterPath {
+                let urlString = "https://image.tmdb.org/t/p/w500\(poster)"
+                let url = URL(string: urlString)
+                cell.posterImage.kf.indicatorType = .activity
+                cell.posterImage.kf.setImage(with: url)
+            }
+            
         }
         return cell
     }
