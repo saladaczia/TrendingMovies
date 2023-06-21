@@ -20,10 +20,13 @@ class TrendingController: UIViewController {
         super.viewDidLoad()
         
         // Get data from service
-        TrendingService().getTrendingRequest { movieList in
-            self.movies = movieList
-            self.TrendingTableView.reloadData()
+        for numPage in 1...10 {
+            TrendingService().getTrendingRequest(page: numPage) { movieList in
+                self.movies += movieList
+                self.TrendingTableView.reloadData()
+            }
         }
+        
         // Assignment TableView data source
         TrendingTableView.dataSource = self
         

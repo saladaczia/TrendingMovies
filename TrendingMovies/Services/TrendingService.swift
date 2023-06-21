@@ -12,7 +12,7 @@ struct TrendingService {
     
     
     
-    func getTrendingRequest(completion: @escaping ([Result]) -> Void) {
+    func getTrendingRequest(page: Int, completion: @escaping ([Result]) -> Void) {
 
        
         
@@ -25,7 +25,7 @@ struct TrendingService {
         // Add URL parameters
         let urlParams = [
             "language":"pl-PL",
-            "page":"1",
+            "page":String(page),
         ]
         
        // Alamofire request
