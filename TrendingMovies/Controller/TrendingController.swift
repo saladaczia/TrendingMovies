@@ -9,13 +9,21 @@ import UIKit
 import Kingfisher
 
 class TrendingController: UIViewController {
-
+    
     // Outlet
     @IBOutlet weak var TrendingTableView: UITableView!
+    
+    // Movies list from service
+    var movies: [Result] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Get data from service
+        TrendingService().getTrendingRequest { movieList in
+            self.movies = movieList
+            self.TrendingTableView.reloadData()
+        }
         // Assignment TableView data source
         TrendingTableView.dataSource = self
         
@@ -33,7 +41,7 @@ extension TrendingController: UITableViewDataSource {
     // Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 20
+        return movies.count
     }
     
     // Resuable Cell
@@ -43,8 +51,7 @@ extension TrendingController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
         
         // Update data in table
-        TrendingService().getTrendingRequest { (movieList) in
-            let mv = movieList[indexPath.row]
+            let mv = self.movies[indexPath.row]
             cell.titleLabel.text = mv.title
             cell.orgTitleLabel.text = mv.originalTitle
             if let year = mv.releaseDate, let score = mv.voteAverage, let genre = mv.genreIDS {
@@ -62,7 +69,7 @@ extension TrendingController: UITableViewDataSource {
                 cell.posterImage.kf.setImage(with: url)
             }
             
-        }
+        
         return cell
     }
     
