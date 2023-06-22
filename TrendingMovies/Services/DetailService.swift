@@ -22,7 +22,7 @@ struct DetailService {
 
         // Add URL parameters
         let urlParams = [
-                "language":"en-EN",
+                "language":"pl-PL",
             ]
         
        // Alamofire request
