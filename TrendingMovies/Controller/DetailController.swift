@@ -9,24 +9,67 @@ import UIKit
 
 class DetailController: UIViewController {
 
+    // Outlets
     @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var scoreVote: UILabel!
+    @IBOutlet weak var voteAve: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     
+    // movie ID from movie list
     var movieID: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scoreVote.text = ""
+        voteAve.text = ""
+        titleLabel.text = ""
+        detailLabel.text = ""
+      
+        // Setting detail parameters
         if let inputID = movieID {
             DetailService().getDetailRequest(iD: inputID) { [self] detail in
+                // Settings Image
                 if let backdropPath = detail.backdropPath {
                     let urlString = "https://image.tmdb.org/t/p/w500\(backdropPath)"
                     let url = URL(string: urlString)
                     backImage.kf.indicatorType = .activity
                     backImage.kf.setImage(with: url)
+                // Setting vote labels
+                    if let score = detail.voteAverage, let votes = detail.voteCount {
+                        scoreVote.text = String(format: "%.2f", score)
+                        let votesString = String(votes)
+                        voteAve.text = "| \(votesString)"
+                    }
+                    // Setting title
+                    if let title = detail.title {
+                        titleLabel.text = title
+                    }
+                    // Setting detail label
+                    if let runTime = detail.runtime, let genre = detail.genres, let date = detail.releaseDate {
+                        if let genreName = genre[0].name {
+                            let dateStr = String(date).dropLast(6)
+                            detailLabel.text = "\(runTime) min • \(genreName) • \(dateStr)"
+                        }
+                        
+                    }
                 }
             }
         }
-print(movieID!)
-        // Do any additional setup after loading the view.
+        
+        // Add gradient to image
+        let view = UIView(frame: backImage.frame)
+        let gradient = CAGradientLayer()
+        gradient.frame = view.frame
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0.0, 1.0]
+        view.layer.insertSublayer(gradient, at: 0)
+
+        backImage.addSubview(view)
+        backImage.bringSubviewToFront(view)
+        
     }
     
 

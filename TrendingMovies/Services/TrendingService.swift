@@ -37,8 +37,6 @@ struct TrendingService {
                   completion(movieList)
               }
               
-                  // use clousure for push results data to controller
-              
           }
 
         
