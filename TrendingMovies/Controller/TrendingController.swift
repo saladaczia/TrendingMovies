@@ -15,7 +15,7 @@ class TrendingController: UIViewController {
     
     // Movies list from service
     var movies: [Result] = []
-    
+    var idForDVC: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +29,7 @@ class TrendingController: UIViewController {
         
         // Assignment TableView data source
         TrendingTableView.dataSource = self
+        TrendingTableView.delegate = self
         
         // Register Nib cell reference
         TrendingTableView.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "listCell")
@@ -77,6 +78,25 @@ extension TrendingController: UITableViewDataSource {
     }
     
     
+}
+
+// MARK: - Extension for TableView Delegate
+
+extension TrendingController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        idForDVC = self.movies[indexPath.row].id!
+        self.performSegue(withIdentifier: "goToDetail", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension TrendingController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetail" {
+            let detailVC = segue.destination as! DetailController
+            detailVC.movieID = idForDVC
+        }
+    }
 }
 
 

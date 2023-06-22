@@ -13,6 +13,9 @@
 		44024A762A38643800E5B946 /* TrendingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44024A752A38643800E5B946 /* TrendingService.swift */; };
 		44024A7C2A3867E600E5B946 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44024A7B2A3867E600E5B946 /* Alamofire */; };
 		4408C6FB2A39AB1300F7572C /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4408C6FA2A39AB1300F7572C /* Genre.swift */; };
+		4416BF8D2A4424380085938F /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416BF8C2A4424380085938F /* DetailService.swift */; };
+		4416BF8F2A4424D30085938F /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416BF8E2A4424D30085938F /* DetailController.swift */; };
+		4416BF912A4429DE0085938F /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416BF902A4429DE0085938F /* DetailModel.swift */; };
 		4466ADFA2A3845C0009B1B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466ADF92A3845C0009B1B93 /* AppDelegate.swift */; };
 		4466ADFC2A3845C0009B1B93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466ADFB2A3845C0009B1B93 /* SceneDelegate.swift */; };
 		4466ADFE2A3845C0009B1B93 /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466ADFD2A3845C0009B1B93 /* TrendingController.swift */; };
@@ -28,6 +31,9 @@
 		44024A712A38641700E5B946 /* TrendingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingModel.swift; sourceTree = "<group>"; };
 		44024A752A38643800E5B946 /* TrendingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingService.swift; sourceTree = "<group>"; };
 		4408C6FA2A39AB1300F7572C /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		4416BF8C2A4424380085938F /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		4416BF8E2A4424D30085938F /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		4416BF902A4429DE0085938F /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		4466ADF62A3845C0009B1B93 /* TrendingMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4466ADF92A3845C0009B1B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4466ADFB2A3845C0009B1B93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				44024A712A38641700E5B946 /* TrendingModel.swift */,
+				4416BF902A4429DE0085938F /* DetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -72,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				44024A752A38643800E5B946 /* TrendingService.swift */,
+				4416BF8C2A4424380085938F /* DetailService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4466ADFD2A3845C0009B1B93 /* TrendingController.swift */,
+				4416BF8E2A4424D30085938F /* DetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,10 +249,13 @@
 			files = (
 				4466ADFE2A3845C0009B1B93 /* TrendingController.swift in Sources */,
 				44024A722A38641700E5B946 /* TrendingModel.swift in Sources */,
+				4416BF8D2A4424380085938F /* DetailService.swift in Sources */,
 				44024A6D2A384A9900E5B946 /* ListCell.swift in Sources */,
 				44024A762A38643800E5B946 /* TrendingService.swift in Sources */,
 				4466ADFA2A3845C0009B1B93 /* AppDelegate.swift in Sources */,
+				4416BF912A4429DE0085938F /* DetailModel.swift in Sources */,
 				4466ADFC2A3845C0009B1B93 /* SceneDelegate.swift in Sources */,
+				4416BF8F2A4424D30085938F /* DetailController.swift in Sources */,
 				4408C6FB2A39AB1300F7572C /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1pg-5t-jrK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Hp-pb-1qj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Hp-pb-1qj">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -33,11 +34,44 @@
                     <navigationItem key="navigationItem" title="Trending Movies" id="ucc-tf-n1Y"/>
                     <connections>
                         <outlet property="TrendingTableView" destination="8Hp-pb-1qj" id="RRY-P5-bk0"/>
+                        <segue destination="cp8-21-fyU" kind="modal" identifier="goToDetail" id="CBc-c6-HpV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-34.507042253521128"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="G0O-OO-Nx7">
+            <objects>
+                <viewController id="cp8-21-fyU" customClass="DetailController" customModule="TrendingMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYO-ul-Qru">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFN-vQ-Pej">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="xTe-C5-2ii"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JZ1-Mj-aJP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hFN-vQ-Pej" firstAttribute="top" secondItem="RYO-ul-Qru" secondAttribute="top" id="4iR-Vg-e3Z"/>
+                            <constraint firstItem="hFN-vQ-Pej" firstAttribute="trailing" secondItem="JZ1-Mj-aJP" secondAttribute="trailing" id="5ju-T9-4rg"/>
+                            <constraint firstItem="hFN-vQ-Pej" firstAttribute="leading" secondItem="JZ1-Mj-aJP" secondAttribute="leading" id="Z3j-R5-dAk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EnI-5U-Umt"/>
+                    <connections>
+                        <outlet property="backImage" destination="hFN-vQ-Pej" id="ae1-a3-tXi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zN4-O6-w6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="-35.491071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Asp-s8-YMa">
