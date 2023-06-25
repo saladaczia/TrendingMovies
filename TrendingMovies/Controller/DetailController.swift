@@ -15,7 +15,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var voteAve: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UITextView!
     @IBOutlet weak var starImage: UIImageView!
     
     // movie ID from movie list
