@@ -8,6 +8,7 @@ TrendingMovies is an iOS application written in Swift that displays a table view
 The TrendingMovies application offers the following features:
 
 - Trending Movies List: The application fetches data from an API to retrieve a list of currently popular movies.
+- Movie Details: By clicking on a movie title, users can view detailed information about the selected film, including its synopsis, release date, cast, and more.
 - Image Caching: The application uses the Kingfisher framework to efficiently cache and display movie poster images.
 - Network Requests: Alamofire, a popular networking framework, is employed to handle network requests and retrieve movie data from the API.
 - User Interface: The application uses UIKit to build the user interface, including the table view for displaying the movie list.
