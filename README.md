@@ -63,4 +63,7 @@ TrendingMovies is a Swift-based iOS application that displays a table view of po
 
 ## Screenshots
 
-![Simulator Screen Shot - iPhone 14 Pro - 2023-06-14 at 13 52 35](https://github.com/saladaczia/TrendingMovies/assets/75745541/8433a245-e5a8-464c-ab0f-d9135cebbb3b)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-06-26 at 15 01 49](https://github.com/saladaczia/TrendingMovies/assets/75745541/85123419-7963-45e8-bdb9-1c5df23fb89f)
+
+![Simulator Screen Shot - iPhone 14 Pro - 2023-06-26 at 15 01 59](https://github.com/saladaczia/TrendingMovies/assets/75745541/b89d6038-b95e-4045-97d6-e8c930401001)
+
