@@ -58,10 +58,16 @@ extension TrendingController: UITableViewDataSource {
             let mv = self.movies[indexPath.row]
             cell.titleLabel.text = mv.title
             cell.orgTitleLabel.text = mv.originalTitle
-            if let year = mv.releaseDate, let score = mv.voteAverage, let genre = mv.genreIDS {
+            if let year = mv.releaseDate, let score = mv.voteAverage {
                 cell.yearLabel.text = String(year.dropLast(6))
                 cell.scoreLabel.text = String(format: "%.1f", score)
-                cell.genereLabel.text = Genre.getName(genreNum: genre[0])
+                let genre = mv.genreIDS
+                if genre != [] {
+                    cell.genereLabel.text = Genre.getName(genreNum: genre![0])
+                } else {
+                    cell.genereLabel.text = "Untitled"
+                }
+                
             }
             
             
