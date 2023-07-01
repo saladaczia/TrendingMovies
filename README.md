@@ -1,7 +1,7 @@
 
 # Application Name: TrendingMovies
 
-TrendingMovies is an iOS application written in Swift that displays a table view of popular movies. It follows the Model-View-Controller (MVC) design pattern and utilizes various frameworks and tools to enhance its functionality.
+TrendingMovies is an iOS application written in Swift that displays a table view of popular movies. It follows the MVVM design pattern and utilizes various frameworks and tools to enhance its functionality.
 
 
 ## Features
@@ -25,7 +25,7 @@ TrendingMovies leverages the following technologies and tools:
 
 **UIKit:** The main framework for building the user interface, including table views and navigation controllers.
 
-**MVC (Model-View-Controller):** The architectural pattern followed by the application, ensuring separation of concerns and modularity.
+**MVVM (Model-View-ViewModel):** Employed as the architectural pattern for the application.
 ## How to Run the Application
 
 To run the TrendingMovies application, follow these steps:
@@ -58,7 +58,7 @@ To run the TrendingMovies application, follow these steps:
 
 ## Summary
 
-TrendingMovies is a Swift-based iOS application that displays a table view of popular movies. It follows the MVC design pattern and utilizes Alamofire and Kingfisher frameworks for networking and image caching, respectively. The user interface is built using UIKit, providing an intuitive experience for users to browse through popular movies.
+TrendingMovies is a Swift-based iOS application that displays a table view of popular movies. It follows the MVVM design pattern and utilizes Alamofire and Kingfisher frameworks for networking and image caching, respectively. The user interface is built using UIKit, providing an intuitive experience for users to browse through popular movies.
 
 
 ## Screenshots
