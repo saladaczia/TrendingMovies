@@ -34,8 +34,8 @@ class TrendingController: UIViewController {
         // Register Nib cell reference
         TrendingTableView.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "listCell")
     }
-
-
+    
+    
 }
 
 // MARK: - Extension for TableView data source
@@ -55,27 +55,25 @@ extension TrendingController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
         
         // Update data in table
-            let mv = self.movies[indexPath.row]
-            cell.titleLabel.text = mv.title
-            cell.orgTitleLabel.text = mv.originalTitle
+        let mv = self.movies[indexPath.row]
+        cell.titleLabel.text = mv.title
+        cell.orgTitleLabel.text = mv.originalTitle
         if let year = mv.releaseDate, let score = mv.voteAverage, let genreID = mv.genreIDS {
-                cell.yearLabel.text = String(year.dropLast(6))
-                cell.scoreLabel.text = String(format: "%.1f", score)
+            cell.yearLabel.text = String(year.dropLast(6))
+            cell.scoreLabel.text = String(format: "%.1f", score)
             if let genre = genreID.first {
                 cell.genereLabel.text = Genre.getName(genreNum: genre)
             }
-                
-            }
-            
-            
-            // Download image with using kingfisher
-            if let poster = mv.posterPath {
-                let urlString = "https://image.tmdb.org/t/p/w500\(poster)"
-                let url = URL(string: urlString)
-                cell.posterImage.kf.indicatorType = .activity
-                cell.posterImage.kf.setImage(with: url)
-            }
-            
+        }
+        
+        // Download image with using kingfisher
+        if let poster = mv.posterPath {
+            let urlString = "https://image.tmdb.org/t/p/w500\(poster)"
+            let url = URL(string: urlString)
+            cell.posterImage.kf.indicatorType = .activity
+            cell.posterImage.kf.setImage(with: url)
+        }
+        
         
         return cell
     }

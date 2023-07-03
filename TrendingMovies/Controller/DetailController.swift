@@ -57,9 +57,10 @@ class DetailController: UIViewController {
                     }
                     // Setting detail label
                     if let runTime = detail.runtime, let genre = detail.genres, let date = detail.releaseDate {
-                        if let genreName = genre[0].name {
+                        
+                        if let genreName = genre.first {
                             let dateStr = String(date).dropLast(6)
-                            detailLabel.text = "\(runTime) min • \(genreName) • \(dateStr)"
+                            detailLabel.text = "\(runTime) min • \(genreName.name!) • \(dateStr)"
                         }
                     }
                 // setting overview label
